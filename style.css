@@ -1,0 +1,85 @@
+body {
+  display : grid;
+  grid-template-columns: 1fr;
+  margin : auto 0;
+}
+
+.zone {
+    color:black;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/* NAV */
+.main_nav {
+  display: flex;
+  list-style: none;
+  font-size: em;
+  margin : 0;
+  background-color: tomato;
+}
+
+.sticky {
+  /* 이 세 가지는 항상 같이 다닌다(헤더에 많이 쓰임) */
+  position : fixed;
+  top : 0;
+  width : 100%;
+}
+
+/* 메일침프처럼 작은 화면에서는 로고랑 삼줄메뉴만 보여야함(나중에 추가하기) */
+@media only screen and (max-width: 600px) {
+   .main_nav {
+    opacity : 0;
+   }
+}
+
+.push {
+  margin-left : auto;
+}
+
+li {
+  padding: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* COVER */
+.container {
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* GRID (Contents) */
+.grid_wrapper {
+  display : grid;
+  grid-gap : 20px;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  justify-content: center;
+}
+
+.grid_wrapper > div {
+  padding: 10%;
+}
+
+.content_img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  height: 50vh;
+}
